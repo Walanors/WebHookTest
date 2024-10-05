@@ -1,52 +1,119 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 
 h1 {
-    color: #333;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.5em;
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #3498db;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 12px 24px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 10px 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.1s;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
 }
 
 .box {
     width: 200px;
     height: 200px;
-    background-color: #3498db;
-    margin: 20px auto;
+    background-color: #e74c3c;
+    margin: 30px auto;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-weight: bold;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .box:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+#counter, #todoList {
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+
+#todoInput {
+    padding: 10px;
+    width: 60%;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#todoList {
+    padding-left: 0;
+}
+
+#todoList li {
+    cursor: pointer;
+    padding: 10px;
+    list-style-type: none;
+    background-color: #ecf0f1;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#todoList li:hover {
+    background-color: #d5dbdb;
+}
+
+#todoList li.completed {
+    text-decoration: line-through;
+    color: #95a5a6;
+    background-color: #f9f9f9;
+}
+
+#addTodoBtn {
+    background-color: #2ecc71;
+}
+
+#addTodoBtn:hover {
+    background-color: #27ae60;
+}
+
+#incrementBtn {
+    background-color: #f39c12;
+}
+
+#incrementBtn:hover {
+    background-color: #d35400;
 }
